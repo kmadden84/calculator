@@ -11,3 +11,129 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+button {
+  border: noen;
+  height: 60px;
+  border-radius: 5px;
+  border-color: beige;
+  font-size: 20px;
+}
+
+.calculator {
+  margin: 0 auto;
+  width: 100%;
+  flex-direction: column;
+  max-width: 500px;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+div#root {
+  width: 100%;
+}
+.buttons button {
+  color: #000;
+  background: transparent;
+  border-color: none;
+  background-color: transparent;
+  border: 0;
+}
+.displayScreen {
+  background: rgb(255, 82, 0);
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  height: 125px
+
+}
+button.generate {
+  border: 0;
+  background-color: 'transparent';
+  background: transparent;
+  width: auto !important;
+  margin-left: 10px;
+
+}
+button.generate:hover {
+cursor: pointer
+
+}
+   span {
+  color: #fff;
+  letter-spacing: 2px;
+  font-family: monospace;
+  font-size: 50px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+button[data-value=C] {
+    flex: 0 1 50% !important;
+    height: 55px !important;
+    border-radius: 47px !important;;
+}
+
+
+button[data-value="C"],
+button[data-value="/"],
+button[data-value="*"],
+button[data-value="+"],
+button[data-value="-"]
+{
+    background: #D9D9D9;
+}
+
+button[data-value="="]
+{
+    background: #FF7A00,
+}
+
+
+.main-buttons {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    flex-direction: column-reverse;
+}
+
+
+.buttons.operators {
+    display: flex;
+  align-items: flex-end;
+}
+
+
+.buttons.clear-divide {
+    display: flex;
+    justify-content: space-between;
+  align-items: center;
+}
+
+button:not([data-value="="]),
+button:not([data-value="AC"]) {
+    width: calc(100% * (1/4));
+    margin-top: 10px;
+}
+
+.buttons button:active {
+    background: #FFBD3D;
+  color: #fff;
+}
+.buttons.clear-divide button:first-child {
+    margin-left: 0 !important;
+}
+button {
+  border-radius: 50%
+}
+button[data-value="="] {
+    flex: 0 1 50% !important;
+    height: 55px !important;
+    border-radius: 47px !important;
+    background-color: #FF603D
+}
